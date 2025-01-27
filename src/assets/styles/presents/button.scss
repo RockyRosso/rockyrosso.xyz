@@ -1,0 +1,192 @@
+@import "./shadows.scss";
+
+@mixin primarybtn() {
+    background-color: var(--ui-primary);
+
+    &[data-btn-style="outline"] {
+        color: var(--ui-primary);
+
+        box-shadow: 0px 0px 0px 3px var(--ui-primary) inset;
+
+        background: transparent;
+    }
+}
+
+@mixin secondarybtn() {
+    background-color: var(--ui-secondary);
+
+    &[data-btn-style="outline"] {
+        color: var(--ui-secondary);
+
+        box-shadow: 0px 0px 0px 3px var(--ui-secondary) inset;
+
+        background: transparent;
+    }
+}
+
+@mixin successbtn() {
+    background-color: var(--success);
+
+    &[data-btn-style="outline"] {
+        color: var(--success);
+        box-shadow: 0px 0px 0px 3px var(--success) inset;
+
+        background: transparent;
+    }
+}
+
+@mixin dangerbtn() {
+    background-color: var(--danger);
+
+    &[data-btn-style="outline"] {
+        color: var(--danger);
+        box-shadow: 0px 0px 0px 3px var(--danger) inset;
+
+        background: transparent;
+    }
+}
+
+@mixin squarebtn($width: 3.5rem, $padding: 1rem) {
+    width: $width;
+    padding: $padding;
+
+    aspect-ratio: 1/1;
+}
+
+@mixin linkpreview() {
+    background-color: transparent;
+
+    padding: 0;
+
+    border-radius: var(--btn-radius);
+
+    @include boxshadow();
+
+    overflow: hidden;
+
+    max-width: 800px;
+    min-width: 10px;
+
+    a {
+        display: grid;
+        place-content: center;
+        position: relative;
+
+        img {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .icon {
+            display: block;
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-size: 2rem;
+
+            z-index: 2;
+
+            transition: ease-in 0.2s;
+
+            opacity: 0;
+        }
+    }
+
+    &:not(:disabled) {
+        &:hover {
+            filter: brightness(70%);
+            transition: ease-in 0.1s;
+        }
+    }
+
+    &:hover {
+        a {
+            .icon {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.button,
+button {
+    $padding: 0.9rem;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: 1.1rem;
+
+    text-decoration: none;
+
+    padding: calc($padding - 2px) $padding calc($padding - 2px) $padding;
+
+    background-color: var(--ui-primary);
+    color: var(--btn-txt);
+
+    border: none;
+    border-radius: var(--btn-radius);
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    margin: 0.6rem;
+
+    transition: ease-in 0.1s;
+
+    @include primarybtn();
+
+    &:not(:disabled) {
+        &:hover {
+            filter: brightness(90%);
+            transition: ease-in 0.1s;
+        }
+    }
+
+    &:disabled {
+        filter: brightness(70%);
+        cursor: not-allowed;
+    }
+
+    &[data-btn-style="link-preview"] {
+        @include linkpreview();
+    }
+
+    &[data-btn-type="secondary"] {
+        @include secondarybtn();
+    }
+
+    &[data-btn-type="success"] {
+        @include successbtn();
+    }
+
+    &[data-btn-type="danger"] {
+        @include dangerbtn();
+    }
+
+    &[data-btn-style="square"] {
+        @include squarebtn();
+    }
+
+    &[data-btn-style="close"] {
+        font-size: 1rem;
+
+        background-color: transparent;
+        color: var(--txt);
+
+        &:hover {
+            background-color: var(--danger);
+            color: white;
+        }
+
+        @include squarebtn(45px, 10px);
+    }
+}

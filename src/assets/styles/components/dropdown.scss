@@ -1,0 +1,40 @@
+.dropdown {
+    max-width: 500px;
+
+    position: relative;
+
+    button {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.dropdown-btn.dropdown-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    filter: brightness(75%);
+
+    transition: none;
+}
+
+.dropdown-content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: absolute;
+
+    max-height: 200px;
+    width: 100%;
+
+    background-color: var(--btn-primary);
+
+    border-bottom-right-radius: var(--btn-radius);
+    border-bottom-left-radius: var(--btn-radius);
+}
+
+.dropdown-options {
+    button {
+        border-radius: 0;
+    }
+}

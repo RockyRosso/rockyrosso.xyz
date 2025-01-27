@@ -1,0 +1,74 @@
+@use "sass:math";
+
+.modal {
+    $padding: 20px;
+
+    position: fixed;
+    top: 50%;
+
+    max-width: 60%;
+    max-height: 90%;
+
+    transform: translate(0, -50%);
+
+    overflow-y: scroll;
+
+    padding: $padding $padding $padding $padding;
+
+    background-color: var(--bg);
+
+    border: none;
+    border-radius: 20px;
+
+    box-shadow: black 0px 0px 5px 5px;
+
+    z-index: 10;
+}
+
+.modal-backdrop {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+
+    background-color: var(--backdrop);
+
+    z-index: 10;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: start;
+
+    margin-bottom: 10px;
+}
+
+.modal-header-name {
+    font-size: 20px;
+
+    margin-right: 10px;
+
+    max-width: 400px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.modal-close {
+    $size: 1rem;
+
+    border-radius: math.div($size, 2);
+
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2px;
+}

@@ -1,0 +1,10 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ProjectTabs from "../components/Projects.vue";
+---
+
+<SiteLayout title="Projects">
+    <article>
+        <ProjectTabs client:load />
+    </article>
+</SiteLayout>

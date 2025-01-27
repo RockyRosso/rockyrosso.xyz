@@ -1,0 +1,30 @@
+.project-options {
+    background-color: var(--container-secondary);
+}
+
+.project-container.web {
+    max-width: 800px;
+}
+
+.project-container {
+    text-align: center;
+    padding: 0.5rem;
+
+    p {
+        text-align: start;
+    }
+
+    .title {
+        $margin: 0.2rem;
+
+        margin-top: $margin;
+        margin-bottom: $margin;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .project-options {
+        justify-content: start;
+        overflow-x: scroll;
+    }
+}

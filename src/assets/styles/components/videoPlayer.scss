@@ -1,0 +1,104 @@
+$player-radius: 15px;
+
+.vid {
+    top: 0;
+    left: 0;
+
+    position: absolute;
+    width: 100% !important;
+
+    background-color: #000;
+}
+
+.vid-container {
+    position: relative;
+
+    width: 100%;
+
+    padding-top: 56.25%;
+
+    overflow: hidden;
+}
+
+.vid-controls {
+    position: absolute;
+
+    display: flex;
+
+    bottom: 0;
+    width: 100%;
+
+    background: var(--container-primary);
+
+    transform: translateY(0);
+}
+
+.vid-controls-option {
+    $pad: 10px;
+
+    padding: 10px;
+
+    background-color: transparent;
+
+    border-radius: 0;
+    font-size: 1em;
+
+    margin: auto;
+}
+
+.vid-controls-options {
+    display: flex;
+    align-items: center;
+
+    &.primary {
+        width: 90%;
+        min-width: 10px;
+    }
+
+    &.secondary {
+        margin-left: auto;
+    }
+}
+
+.vid-controls-volume {
+    width: 100px;
+}
+
+.vid-progress {
+    flex: 1 1 0%;
+    position: relative;
+    display: flex;
+
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+
+    height: 5px;
+
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    height: 15px;
+}
+
+.vid-progress-filled {
+    width: 50%;
+    background: var(--ui-primary);
+    flex: 0;
+    flex-basis: 0%;
+}
+
+.vid-embed-container {
+    position: relative;
+
+    aspect-ratio: 16 / 9;
+    max-width: 800px;
+}
+
+.vid-embed {
+    border-radius: var(--btn-radius);
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    transform: translate(-50%);
+}

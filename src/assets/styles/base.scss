@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "./presents/button.scss";
+@import "./presents/input.scss";
+@import "./presents/text.scss";
+@import "./presents/image.scss";
+@import "./presents/breaker.scss";
+
+@import "./presents/flex.scss";
+@import "./presents/grid.scss";
+@import "./presents/padding.scss";
+@import "./presents/margin.scss";
+
+:root {
+    --bg: #181818;
+
+    --primary-brightness: 44%;
+    --secondary-brightness: 40%;
+
+    --txt: #fff;
+    --txt-input: #000;
+    --txt-sub: hsl(0, 0%, 50%);
+
+    --danger-bright: 46%;
+    --success-bright: 40%;
+
+    --backdrop: hsla(0, 0%, 48%, 0.3);
+
+    --primary: white;
+
+    --ui-primary: hsl(209, 100%, 44%);
+    --ui-secondary: hsl(276, 100%, 44%);
+
+    --ui-primary-dimmed: hsl(209, 100%, var(--secondary-brightness));
+    --ui-secondary-dimmed: hsl(276, 100%, var(--secondary-brightness));
+
+    --container-primary: #242424;
+    --container-secondary: #1c1c1c;
+
+    --grey-secondary: #737373;
+
+    --danger: hsl(0, 98%, var(--danger-bright));
+    --success: hsl(138, 80%, var(--success-bright));
+
+    --btn-radius: 0.5rem;
+
+    --btn-txt: #ffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    overflow-x: hidden;
+
+    background-color: var(--bg);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+}
+
+footer {
+    $footer-margins: auto;
+
+    background-color: var(--container-secondary);
+    padding: 0.5rem;
+
+    margin-left: $footer-margins;
+    margin-right: $footer-margins;
+}
+
+.fade-anim {
+    animation-name: fadeanim;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeanim {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
