@@ -6,7 +6,7 @@ export const projects: Project[] = [
 
         title: "Convert4.me Icons",
         description:
-            "Icons for the convert4.me site. As of January 27th, 2025, these icons are not yet visible on the site.",
+            "Icons for the convert4.me site.",
 
         media: [
             {
