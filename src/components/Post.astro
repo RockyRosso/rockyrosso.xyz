@@ -1,0 +1,25 @@
+---
+
+const { author, title, date } = Astro.props;
+
+import "../assets/styles/components/post.scss"
+
+---
+
+<section>
+    <div class="flex-column">
+        <div class="postcard-container">
+            <div>
+                <p>{date}</p>
+            </div>
+
+            <div>
+                <h1>{title}</h1>
+            </div>
+
+            <div>
+                <p>{author}</p>
+            </div>
+        </div>
+    </div>
+</section>

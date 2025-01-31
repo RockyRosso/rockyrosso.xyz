@@ -2,4 +2,13 @@ img {
     &[data-img-style="round"] {
         border-radius: 100%;
     }
+
+    &[data-img-style="cover"] {
+        width: 100%;
+        
+        object-fit: cover;
+        max-height: 500px;
+
+        aspect-ratio: 16 / 9;
+    }
 }

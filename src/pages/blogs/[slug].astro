@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { render } from "astro:content";
+import { getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+    const blogPosts = await getCollection("blogs");
+
+    return blogPosts.map((post) => {
+        return {
+            params: {
+                slug: post.data.slug
+            },
+
+            props: {
+                title: post.data.title,
+                cover: post.data.cover,
+                date: post.data.date,
+                author: post.data.author
+            }
+        }
+    })
+}
+
+const { slug } = Astro.params;
+const { title, cover, date, author } = Astro.props;
+
+const postEntry = await getEntry("blogs", slug);
+
+if (!postEntry) return;
+
+const { Content } = await render(postEntry);
+
+---
+
+<SiteLayout title={title}>
+    <nav class="header">
+        <a class="button" href="/blogs"><span>Back</span></a>
+    </nav>
+    <article class="flex-column">
+        <main style="max-width: 800px; width: 100%; padding: 1rem; margin-bottom: 3rem;">
+            <h1 class="blog-title">{title}</h1>
+            <img data-img-style="cover" src={cover} />
+            
+            <div class="flex space-between">
+                <p>Author: {author}</p>
+                <p data-txt-type="small"><span><i class="fa-solid fa-calendar-days"></i> {date}</span></p>
+            </div>
+
+            <hr />
+
+            <div class="blog-content">
+                <Content />
+            </div>
+        </main>
+    </article>
+</SiteLayout>

@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex gap project-options">
+    <nav class="flex header">
         <a class="button" href="/"
             ><span><i class="fa-solid fa-angle-left"></i></span
         ></a>

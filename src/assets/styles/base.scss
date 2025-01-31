@@ -11,6 +11,8 @@
 @import "./presents/padding.scss";
 @import "./presents/margin.scss";
 
+@import "./components/header.scss";
+
 :root {
     --bg: #181818;
 
@@ -72,6 +74,7 @@ footer {
 
     background-color: var(--container-secondary);
     padding: 0.5rem;
+    padding-bottom: 0;
 
     margin-left: $footer-margins;
     margin-right: $footer-margins;

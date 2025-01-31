@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Post from "../components/Post.astro";
+
+const posts = await getCollection("blogs");
+
+---
+
+<SiteLayout title="Blogs">
+    <nav class="header flex">
+        <a class="button" href="/"><span>Home</span></a>
+    </nav>
+    <article class="grid-layout">
+        {posts.map(post => (
+            <a style="text-decoration: none;" href={`/blogs/${post.data.slug}`}><Post title={post.data.title} date={post.data.date} author={post.data.author} /></a>
+        ))}
+    </article>
+</SiteLayout>

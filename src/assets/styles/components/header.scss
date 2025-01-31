@@ -1,0 +1,21 @@
+.header {
+    gap: 10px;
+
+    width: 100%;
+    padding: 0.5rem;
+
+    background-color: var(--container-secondary);
+
+    z-index: 99999;
+
+    &.sticky {
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .header {
+        justify-content: start;
+        overflow-x: scroll;
+    }
+}

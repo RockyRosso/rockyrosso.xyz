@@ -7,12 +7,22 @@ h1.title {
     }
 }
 
+h1.blog-title {
+    $margins: 1rem;
+
+    font-size: 4rem;
+    font-weight: 700;
+
+    margin-top: $margins;
+    margin-bottom: $margins;
+}
+
 h1,
 h2,
 h3 {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 750;
     font-style: normal;
 
     font-size: 2rem;
@@ -32,7 +42,7 @@ a {
     font-weight: 500;
     font-style: normal;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     color: var(--txt);
 
@@ -63,4 +73,17 @@ p {
     }
 
     word-break: break-word;
+    word-spacing: 0px;
+    
+}
+
+.blog-content {
+    p, a {
+        filter: brightness(90%);
+        line-height: 1.5rem;
+    }
+}
+
+a {
+    display: inline-block;
 }

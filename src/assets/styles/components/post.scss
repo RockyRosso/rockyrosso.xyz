@@ -1,0 +1,30 @@
+.postcard-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 1rem;
+    margin: 1rem;
+
+    max-width: 900px;
+    width: 100%;
+
+    background-color: var(--container-primary);
+
+    border-radius: var(--btn-radius);
+
+    img {
+        border-radius: var(--btn-radius);
+    }
+}
+
+.postcard-footer {
+    display: flex;
+    align-items: center;
+}
+
+.postcard-img {
+    height: 300px !important;
+}
