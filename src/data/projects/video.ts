@@ -4,6 +4,16 @@ export const projects: Project[] = [
     {
         type: "video",
 
+        title: "Greenland Trailer Re-Edit",
+        description: "A custom made trailer for the film Greenland (2020)",
+        videoLink: "https://youtube.com/embed/6f7lIioJQpk",
+
+        embed: true,
+    },
+
+    {
+        type: "video",
+
         title: "2012 Trailer Re-Edit",
         description: "A custom made trailer for the film 2012 (2009)",
         videoLink: "https://youtube.com/embed/7Un4nr2x7jg",
