@@ -2,14 +2,17 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
     {
-        type: "link",
+        type: "gallery",
 
         title: "Convert4.me",
         description:
             "A website for converting posts from Twitter, Instagram, and YouTube into almost any playable media format",
 
-        image: "https://cdn.rockyrosso.xyz/ss/02_convert4.me_web_ss.png",
-        link: "https://convert4.me",
+        media: [
+            {
+                videoLink: "https://cdn.rockyrosso.xyz/projects/videos/01_convert4me_demo.mp4"
+            }
+        ],
 
         madeWith: [
             {
