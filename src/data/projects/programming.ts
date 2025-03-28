@@ -6,7 +6,7 @@ export const projects: Project[] = [
 
         title: "Convert4.me",
         description:
-            "A website for converting posts from Twitter, Instagram, and YouTube into almost any playable media format",
+            "A website for converting posts from Twitter, Instagram, and YouTube into almost any playable media format. The site has been down since March of 2025",
 
         media: [
             {
