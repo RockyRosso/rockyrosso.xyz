@@ -93,6 +93,8 @@ export const projects: Project[] = [
         description:
             "A forum website with the ability for users to post about specific topics, and engage with other posts using likes and comments. The site has been offline since mid 2024.",
 
+        source: "https://github.com/RockyRosso/funni-forum",
+
         media: [
             {
                 videoLink:

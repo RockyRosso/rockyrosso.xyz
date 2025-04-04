@@ -6,6 +6,9 @@
                 v-if="project.type === 'gallery'"
                 :project="project"
             />
+            <div>
+                <a v-if="project.source && project.source !== ''" :href="project.source" target="_blank" class="button"><span><i class="fa-brands fa-github"></i></span> Source Code</a>
+            </div>
         </div>
     </div>
 </template>
